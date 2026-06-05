@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Voter Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>National Voter Service Portal</h1>
+
+        <p>Government of India</p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <button onclick="showPage('home')">
+            Home
+        </button>
+
+        <button onclick="showPage('register')">
+            Register
+        </button>
+
+        <button onclick="showPage('apply')">
+            Apply Voter ID
+        </button>
+
+        <button onclick="showPage('correction')">
+            Correction
+        </button>
+
+        <button onclick="showPage('status')">
+            Status
+        </button>
+
+        <button onclick="showPage('admin')">
+            Admin
+        </button>
+
+    </nav>
+
+
+
+    <!-- HOME PAGE -->
+
+    <section id="home" class="page active">
+
+        <div class="card">
+
+            <h2>Citizen Details</h2>
+
+            <input type="text" id="name" placeholder="Enter Name">
+
+            <input type="number" id="age" placeholder="Enter Age">
+
+            <textarea id="address" placeholder="Enter Address"></textarea>
+
+            <button onclick="submitHome()">
+                Submit
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- REGISTER PAGE -->
+
+    <section id="register" class="page">
+
+        <div class="card">
+
+            <h2>Registration</h2>
+
+            <input type="email" id="email" placeholder="Enter Email">
+
+            <input type="password" id="password" placeholder="Enter Password">
+
+            <button onclick="registerUser()">
+                Register
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- APPLY PAGE -->
+
+    <section id="apply" class="page">
+
+        <div class="card">
+
+            <h2>Apply Voter ID</h2>
+
+            <input type="text" id="fatherName" placeholder="Father Name">
+
+            <input type="text" id="motherName" placeholder="Mother Name">
+
+            <input type="text" id="location" placeholder="Location">
+
+            <input type="text" id="qualification" placeholder="Qualification">
+
+            <button onclick="applyVoter()">
+                Apply
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CORRECTION PAGE -->
+
+    <section id="correction" class="page">
+
+        <div class="card">
+
+            <h2>Correction Form</h2>
+
+            <input type="text" id="correctName" placeholder="Correct Name">
+
+            <input type="number" id="correctAge" placeholder="Correct Age">
+
+            <textarea id="correctAddress" placeholder="Correct Address"></textarea>
+
+            <button onclick="updateDetails()">
+                Update
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STATUS PAGE -->
+
+    <section id="status" class="page">
+
+        <div class="card">
+
+            <h2>Application Status</h2>
+
+            <input type="text" id="applicationId" placeholder="Application ID">
+
+            <button onclick="checkStatus()">
+                Check Status
+            </button>
+
+            <h3 id="result"></h3>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ADMIN PAGE -->
+
+    <section id="admin" class="page">
+
+        <div class="card">
+
+            <h2>Admin Login</h2>
+
+            <input type="text" id="adminUser" placeholder="Username">
+
+            <input type="password" id="adminPass" placeholder="Password">
+
+            <button onclick="adminLogin()">
+                Login
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
